@@ -47,6 +47,7 @@
             this.FilterStop = new System.Windows.Forms.Button();
             this.GrabStop = new System.Windows.Forms.Button();
             this.CameraClose = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BeforeImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AfterImage)).BeginInit();
             this.SuspendLayout();
@@ -227,9 +228,19 @@
             this.CameraClose.UseVisualStyleBackColor = true;
             this.CameraClose.Click += new System.EventHandler(this.CameraClose_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(75, 402);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 12);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Sequence";
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(1714, 821);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.CameraClose);
             this.Controls.Add(this.GrabStop);
             this.Controls.Add(this.FilterStop);
@@ -279,6 +290,7 @@
         private System.Windows.Forms.Button FilterStop;
         private System.Windows.Forms.Button GrabStop;
         private System.Windows.Forms.Button CameraClose;
+        private System.Windows.Forms.Label label4;
     }
 }
 
