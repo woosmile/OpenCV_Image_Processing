@@ -1,38 +1,35 @@
-# Vision Program Prototype
+# OpenCV Gaussian Filter 영상처리 프로그램
 
-본 프로젝트는 **.NET Framework 4.8** 및 **OpenCV(OpenCvSharp)** 를 기반으로 한 **C# WinForms 영상처리 프로그램**입니다.
+본 프로젝트는 **.NET Framework 4.8** 및 **OpenCV(OpenCvSharp)** 를 기반으로 한 **C# WinForms 영상처리 프로그램** 입니다.  
 사용자가 이미지를 불러오고, Gaussian 커널 사이즈를 조절하여 필터를 적용할 수 있습니다.
-
----
 
 ## 🖼️ UI 구성
 
 ![프로그램 예시 화면](./program.png)
 
 ### 기본 동작
-- Open Image 버튼 클릭 후 이미지 파일 선택
-- Gaussian 필터 커널 사이즈 지정 (예: X=25, Y=25)
-- Gaussian Filter 클릭 → 필터 적용 결과 출력
-- Save Image 클릭 → 결과 저장
+- Open Image: 필터를 적용할 이미지 파일 불러오기 (불러온 이미지 좌측에 출력)
+- size X: Gaussian 필터 커널 X 크기 지정
+- size Y: Gaussian 필터 커널 Y 크기 지정
+- Gaussian Filter: 필터 적용 (적용 후 이미지 우측에 출력)
+- Save Image: 필터가 적용된 이미지 저장 (저장 파일명에 gaussian_ 추가)
+- Prev/Next: 불러온 이미지 탐색
 
-### Sequence
-- Camera Open → 카메라 열기
-- Grab Start / Grab Stop → 이미지 캡처 시작/중지
-- Filter Start → 실시간 필터 적용 시작
-- Filter Stop → 필터 적용 중지
-- Camera Close → 카메라 종료
-
----
+### Sequence (검사 장비 모방)
+- Camera Open: 카메라 Open Flag 변수 True로 지정
+- Grab Start: 필터를 적용할 이미지 파일을 불러온 후 1초 간격으로 불러온 이미지를 좌측에 순서대로 출력
+- Filter Start: 현재 이미지에 필터를 적용해서 우측에 출력
+- Filter Stop: 필터 적용 비활성화
+- Grab Stop: 좌측에 이미지 출력 중지
+- Camera Close: 카메라 Open Flag False로 지정
 
 ## 🧩 주요 기능
 
 - 이미지 파일 불러오기 및 저장
 - Gaussian 필터 적용 (커널 크기 지정 가능)
 - 필터 처리 시간(ms) 측정 및 표시
-- 카메라 연동: 영상 캡처 및 필터 적용
 - 이미지 탐색 (Prev/Next 버튼)
-
----
+- 이미지 로테이션 시퀀스 기능
 
 ## 🛠️ 개발 환경
 
@@ -40,8 +37,6 @@
 - **프레임워크**: .NET Framework 4.8
 - **GUI**: Windows Forms
 - **라이브러리**: [OpenCvSharp4.Windows](https://www.nuget.org/packages/OpenCvSharp4.Windows/) (NuGet)
-
----
 
 ## ⚙️ 설치 및 실행 방법
 
@@ -55,7 +50,7 @@
 
 ```bash
 # 저장소 클론
-git clone [https://github.com/your-username/vision-program-prototype.git](https://github.com/woosmile/OpenCV_Image_Processing.git)
+git clone https://github.com/woosmile/OpenCV_Image_Processing.git
 
 # Visual Studio로 솔루션 열기
 # NuGet 패키지 복원 후 빌드
