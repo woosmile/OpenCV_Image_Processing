@@ -21,7 +21,7 @@
 - Filter Start: 현재 이미지에 필터를 적용해서 우측에 출력 및 저장
 - Filter Stop: 필터 적용 비활성화
 - Grab Stop: 좌측에 이미지 출력 중지
-- Camera Close: 카메라 Open Flag False로 지정
+- Camera Close: 카메라 Open Flag 변수 False로 지정
 
 ## 🧩 주요 기능
 
