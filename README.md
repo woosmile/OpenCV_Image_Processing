@@ -1,6 +1,6 @@
 # OpenCV Gaussian Filter 영상처리 프로그램
 
-본 프로젝트는 **.NET Framework 4.8** 및 **OpenCV(OpenCvSharp)** 를 기반으로 한 **C# WinForms 영상처리 프로그램** 입니다.  
+이 프로그램은 **.NET Framework 4.8** 및 **OpenCV(OpenCvSharp)** 를 기반으로 한 **C# WinForms 영상처리 프로그램** 입니다.  
 사용자가 이미지를 불러오고, Gaussian 커널 사이즈를 조절하여 필터를 적용할 수 있습니다.
 
 ## 🖼️ UI 구성
